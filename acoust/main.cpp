@@ -16,8 +16,21 @@ void test_vector() {
   cout << "c=" << c << endl;
 }
 
+int f(int t) {
+  if (t < 1) {
+    return 1;
+  }
+
+  return t * f(t - 1);
+}
+  
+void
+test_recursion() {
+  cout << f(4) << endl;
+}
 
 int main() {
-test_vector();
+  test_vector();
+  test_recursion();
 
 }
